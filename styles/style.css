@@ -48,10 +48,10 @@ a {
   color: #fff;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
   background-color: transparent;
   cursor: pointer;
   block-size: 34px;
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
 .button:hover {
@@ -255,12 +255,14 @@ a {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .content__video-card-description-container {
   padding: 2px 0 4px 2px;
-  inline-size: 100%;
+  block-size: 107px;
+  inline-size: 200px;
+  overflow: hidden;
 }
 
 .content__video-card-title {
@@ -268,10 +270,18 @@ a {
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .content__video-card-description {
   line-height: 0.9;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-title + .content__video-card-description {
